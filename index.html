@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI & Emerging Technology Club at Quinnipiac University — events, projects, and community for students exploring AI, data, robotics, and future tech."
+    />
+    <title>QU AI & Emerging Technology Club</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="matrix-rain" aria-hidden="true"></div>
+
+    <header class="site-header" data-elevate-on-scroll>
+      <div class="header-fx" aria-hidden="true">
+        <div class="header-grid"></div>
+        <div class="header-glow"></div>
+        <div class="header-code"></div>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="AI & Emerging Technology Club home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">QU AI & Emerging Tech</span>
+            <span class="brand-sub">Student Organization</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+          </button>
+
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#spotlight">Spotlight</a></li>
+            <li><a href="#join">Join</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero hero-fx">
+        <div class="hero-bg" aria-hidden="true">
+          <canvas id="hero-particles" class="hero-particles"></canvas>
+          <div class="hero-gridfx"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-streaks"></div>
+        </div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal">Quinnipiac University • Student Organization</p>
+            <h1 class="hero-title reveal">AI & Emerging Technology Club</h1>
+            <p class="hero-tagline reveal">
+              A hands-on community for students exploring <strong>AI</strong>, <strong>data</strong>,
+              <strong>robotics</strong>, and the next wave of technology — through workshops, demos, and
+              real projects.
+            </p>
+
+            <div class="hero-actions reveal">
+              <a class="btn btn-primary" href="#join">Join the club</a>
+              <a class="btn btn-ghost" href="#events">Featured workshop</a>
+            </div>
+
+            <dl class="hero-stats reveal" aria-label="Club highlights">
+              <div class="stat">
+                <dt>Weekly</dt>
+                <dd>Workshops & build nights</dd>
+              </div>
+              <div class="stat">
+                <dt>Real demos</dt>
+                <dd>Ship portfolio projects</dd>
+              </div>
+              <div class="stat">
+                <dt>Open to all</dt>
+                <dd>Any major, any level</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-media reveal" aria-label="Hero image">
+            <figure
+              class="hero-image"
+              aria-label="Futuristic Quinnipiac AI bobcat hero visual"
+              data-tilt
+              data-tilt-strength="10"
+            >
+              <img
+                class="hero-bobcat-img"
+                src="./images/future_cat.png"
+                alt="Futuristic AI robotic bobcat visual"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="hero-image-overlay" aria-hidden="true"></div>
+
+              <div class="hero-image-top">
+                <span class="hero-chip">
+                  <span class="chip-dot" aria-hidden="true"></span>
+                  <span>Next up: Featured Workshop</span>
+                </span>
+                <span class="hero-chip hero-chip-gold">Hands-on • Beginner-friendly</span>
+              </div>
+
+              <div class="hero-image-caption">
+                <p class="hero-image-title">Quinnipiac’s Future AI Lab</p>
+                <p class="hero-image-sub">
+                  Student-built demos, workshops, and robotics — powered by electric blue + Quinnipiac gold.
+                </p>
+              </div>
+
+              <div class="hero-float" aria-hidden="true">
+                <div class="float-card">
+                  <p class="float-kicker">Build Night</p>
+                  <p class="float-title">Campus Helper Bot</p>
+                </div>
+                <div class="float-card float-card-2">
+                  <p class="float-kicker">Workshop</p>
+                  <p class="float-title">Prompting & Evaluation</p>
+                </div>
+                <div class="float-card float-card-3">
+                  <p class="float-kicker">Demo Night</p>
+                  <p class="float-title">Ship • Show • Improve</p>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2>About the club</h2>
+            <p>
+              We’re a student-led community exploring real-world AI and emerging technologies through
+              workshops, guest speakers, and collaborative projects.
+            </p>
+          </header>
+
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <h3>Learn by doing</h3>
+              <p>
+                Weekly sessions with practical topics like prompt engineering, model evaluation, data
+                visualization, and responsible AI.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Build together</h3>
+              <p>
+                Team up on beginner-friendly and advanced projects — from chatbots and computer vision to
+                campus-focused tools.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Grow your network</h3>
+              <p>
+                Connect with alumni, researchers, and industry speakers. Share internships, research, and
+                hackathon opportunities.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="section section-alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2>Upcoming events</h2>
+            <p>Workshops, guest talks, and build nights designed for busy students.</p>
+          </header>
+
+          <article class="featured-event reveal" aria-label="Featured AI workshop">
+            <div class="featured-event-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span>Featured AI Workshop</span>
+            </div>
+            <div class="featured-event-body">
+              <p class="featured-event-date">Apr 22 • 6:30 PM • SB 101</p>
+              <h3 class="featured-event-title">Build a Mini-RAG App (Retrieval + Chat) in 60 Minutes</h3>
+              <p class="featured-event-desc">
+                Bring a laptop and leave with a working demo: ingest a few documents, retrieve relevant
+                snippets, and chat with sources. We’ll cover prompting, chunking, and simple evaluation.
+              </p>
+              <ul class="featured-event-points" aria-label="Workshop highlights">
+                <li>Starter template provided</li>
+                <li>Beginner-friendly teams</li>
+                <li>Publish your demo to GitHub</li>
+              </ul>
+            </div>
+            <div class="featured-event-cta">
+              <a class="btn btn-primary btn-block" href="#join">Reserve a spot</a>
+              <a class="btn btn-ghost btn-block" href="#projects">See demo-style projects</a>
+              <p class="featured-event-note">Limited seating • Walk-ins welcome if space allows</p>
+            </div>
+          </article>
+
+          <div class="card-grid event-grid">
+            <article class="card reveal">
+              <div class="card-top">
+                <p class="pill">Workshop</p>
+                <p class="card-date">Apr 18 • 6:00 PM</p>
+              </div>
+              <h3>Intro to AI Tooling for Students</h3>
+              <p>
+                A practical walkthrough of AI workflows: prompts, evaluation, automation, and safe use in
+                academic work.
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">📍 SB 101</span>
+                <span class="meta-item">⏱ 60 min</span>
+              </div>
+              <a class="card-link" href="#join">RSVP via club email <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-top">
+                <p class="pill pill-gold">Guest Speaker</p>
+                <p class="card-date">Apr 25 • 5:30 PM</p>
+              </div>
+              <h3>AI in Healthcare & Ethics</h3>
+              <p>
+                Learn how AI is used in clinical settings and why transparency, bias testing, and human
+                oversight matter.
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">📍 Online</span>
+                <span class="meta-item">⏱ 45 min</span>
+              </div>
+              <a class="card-link" href="#join">Get the link <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-top">
+                <p class="pill">Build Night</p>
+                <p class="card-date">May 2 • 6:30 PM</p>
+              </div>
+              <h3>Project Sprint: Campus Helper Bot</h3>
+              <p>
+                Form teams, pick a feature, and ship a demo. Beginners welcome — we’ll pair you with a
+                mentor and starter template.
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">📍 Library Lab</span>
+                <span class="meta-item">⏱ 90 min</span>
+              </div>
+              <a class="card-link" href="#projects">See project ideas <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2>Student AI projects</h2>
+            <p>
+              Real club demos built by students — designed to be shippable, showable, and easy to contribute to.
+            </p>
+          </header>
+
+          <div class="demo-grid" aria-label="Project demos">
+            <article class="demo-card reveal">
+              <div class="demo-media" role="img" aria-label="Demo screenshot placeholder: Study Companion">
+                <span class="demo-badge">Live Demo</span>
+              </div>
+              <div class="demo-body">
+                <div class="demo-top">
+                  <h3 class="demo-title">Study Companion</h3>
+                  <span class="demo-status">In progress</span>
+                </div>
+                <p class="demo-desc">
+                  Upload notes → get summaries, flashcards, and practice quizzes. Focus on evaluation and
+                  reducing hallucinations.
+                </p>
+                <ul class="tag-row" aria-label="Tech stack">
+                  <li class="tag">Web</li>
+                  <li class="tag">NLP</li>
+                  <li class="tag">RAG</li>
+                </ul>
+                <div class="demo-links">
+                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="demo-card reveal">
+              <div class="demo-media" role="img" aria-label="Demo screenshot placeholder: Campus Data Dashboard">
+                <span class="demo-badge demo-badge-gold">New</span>
+              </div>
+              <div class="demo-body">
+                <div class="demo-top">
+                  <h3 class="demo-title">Campus Data Dashboard</h3>
+                  <span class="demo-status demo-status-live">Shipping</span>
+                </div>
+                <p class="demo-desc">
+                  A clean dashboard template for student research: charts, filters, and a “data story” page
+                  for presentations.
+                </p>
+                <ul class="tag-row" aria-label="Tech stack">
+                  <li class="tag">Data Viz</li>
+                  <li class="tag">Analytics</li>
+                  <li class="tag">Open Data</li>
+                </ul>
+                <div class="demo-links">
+                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="demo-card reveal">
+              <div class="demo-media" role="img" aria-label="Demo screenshot placeholder: Campus Helper Bot">
+                <span class="demo-badge">Build Night</span>
+              </div>
+              <div class="demo-body">
+                <div class="demo-top">
+                  <h3 class="demo-title">Campus Helper Bot</h3>
+                  <span class="demo-status">Starter-friendly</span>
+                </div>
+                <p class="demo-desc">
+                  A chatbot that answers common campus questions using a small, curated knowledge base and
+                  citations.
+                </p>
+                <ul class="tag-row" aria-label="Tech stack">
+                  <li class="tag">RAG</li>
+                  <li class="tag">UX</li>
+                  <li class="tag">Docs</li>
+                </ul>
+                <div class="demo-links">
+                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="demo-card reveal">
+              <div class="demo-media" role="img" aria-label="Demo screenshot placeholder: Robotics Vision Lab">
+                <span class="demo-badge">Lab</span>
+              </div>
+              <div class="demo-body">
+                <div class="demo-top">
+                  <h3 class="demo-title">Robotics Vision Lab</h3>
+                  <span class="demo-status">Prototype</span>
+                </div>
+                <p class="demo-desc">
+                  Lightweight object detection demos for club robots. Build nights include dataset curation
+                  and testing.
+                </p>
+                <ul class="tag-row" aria-label="Tech stack">
+                  <li class="tag">CV</li>
+                  <li class="tag">Robotics</li>
+                  <li class="tag">Edge AI</li>
+                </ul>
+                <div class="demo-links">
+                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-foot reveal">
+            <a class="btn btn-ghost" href="#join">Bring an idea — we’ll help you demo it</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="spotlight" class="section section-alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2>Leadership & member spotlight</h2>
+            <p>Meet the students organizing sessions and mentoring projects.</p>
+          </header>
+
+          <div class="spotlight-grid">
+            <article class="person-card reveal">
+              <div class="avatar" aria-hidden="true">
+                <span class="avatar-initials">AR</span>
+              </div>
+              <div class="person-body">
+                <h3>Alex Rivera</h3>
+                <p class="role">President • Applied AI</p>
+                <p class="bio">
+                  Focused on building approachable, real-world AI workshops and helping members ship their
+                  first demos.
+                </p>
+                <div class="person-links">
+                  <a href="#footer">Email</a>
+                  <a href="#footer">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="person-card reveal">
+              <div class="avatar avatar-gold" aria-hidden="true">
+                <span class="avatar-initials">MJ</span>
+              </div>
+              <div class="person-body">
+                <h3>Maya Johnson</h3>
+                <p class="role">Vice President • Data & Research</p>
+                <p class="bio">
+                  Leads the project showcase program and helps students turn class work into portfolio-grade
+                  case studies.
+                </p>
+                <div class="person-links">
+                  <a href="#footer">Email</a>
+                  <a href="#footer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="person-card reveal">
+              <div class="avatar" aria-hidden="true">
+                <span class="avatar-initials">SK</span>
+              </div>
+              <div class="person-body">
+                <h3>Sam Kim</h3>
+                <p class="role">Tech Lead • Robotics</p>
+                <p class="bio">
+                  Runs build nights and maintains starter templates for web, Python, and hardware-focused
+                  projects.
+                </p>
+                <div class="person-links">
+                  <a href="#footer">Discord</a>
+                  <a href="#footer">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="join" class="section join">
+        <div class="container">
+          <div class="join-card reveal">
+            <div class="join-copy">
+              <h2>Join the club</h2>
+              <p>
+                Make this semester the one where you actually ship something. Meet teammates, learn modern AI
+                workflows, and leave with demos you can show in interviews.
+              </p>
+
+              <ul class="checklist" aria-label="Member benefits">
+                <li>Fast-start workshops with templates</li>
+                <li>Project squads with mentors</li>
+                <li>Demo nights + portfolio support</li>
+              </ul>
+
+              <div class="join-actions">
+                <a class="btn btn-primary" href="mailto:ai-club@quinnipiac.edu?subject=Join%20the%20AI%20Club">
+                  Email to join
+                </a>
+                <a class="btn btn-ghost" href="#events">See the featured workshop</a>
+              </div>
+            </div>
+
+            <form class="join-form" action="#" method="post" novalidate>
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@quinnipiac.edu"
+                />
+              </div>
+              <div class="field">
+                <label for="interest">Interest</label>
+                <select id="interest" name="interest">
+                  <option value="ai">AI & Machine Learning</option>
+                  <option value="data">Data & Analytics</option>
+                  <option value="robotics">Robotics & Hardware</option>
+                  <option value="product">Product & UX</option>
+                  <option value="other">Not sure yet</option>
+                </select>
+              </div>
+
+              <button class="btn btn-primary btn-block" type="submit">
+                Get membership info + next meeting details
+              </button>
+              <p class="form-note">
+                Demo form for the landing page. Replace with Google Forms, a campus org platform, or your
+                mailing list provider.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-mark" aria-hidden="true"></div>
+          <div>
+            <p class="footer-title">AI & Emerging Technology Club</p>
+            <p class="footer-sub">Quinnipiac University • Hamden, CT</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-head">Contact</p>
+          <ul class="footer-links">
+            <li><a href="mailto:ai-club@quinnipiac.edu">ai-club@quinnipiac.edu</a></li>
+            <li><a href="#join">Join mailing list</a></li>
+            <li><a href="#events">Attend an event</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-head">Social</p>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
+            <li><a href="#" aria-label="LinkedIn (placeholder link)">LinkedIn</a></li>
+            <li><a href="#" aria-label="Discord (placeholder link)">Discord</a></li>
+            <li><a href="#" aria-label="GitHub (placeholder link)">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> QU AI & Emerging Technology Club. All rights reserved.</p>
+        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
