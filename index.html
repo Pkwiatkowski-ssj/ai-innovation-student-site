@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -52,9 +52,9 @@
           <ul id="primary-nav" class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#events">Events</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#spotlight">Spotlight</a></li>
-            <li><a href="#join">Join</a></li>
+            <li><a href="#featured-projects">Projects</a></li>
+            <li><a href="#spotlight">Team</a></li>
+            <li><a href="#join" class="nav-cta">Join Us</a></li>
           </ul>
         </nav>
       </div>
@@ -70,27 +70,37 @@
         </div>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow reveal">Quinnipiac University • Student Organization</p>
-            <h1 class="hero-title reveal">AI & Emerging Technology Club</h1>
+            <p class="eyebrow reveal">Quinnipiac University &bull; Student Organization</p>
+            <h1 class="hero-title reveal">
+              Where <span class="title-gradient">Students</span><br />
+              Build the Future<br />
+              <span class="title-gradient-gold">with AI.</span>
+            </h1>
             <p class="hero-tagline reveal">
               A hands-on community for students exploring <strong>AI</strong>, <strong>data</strong>,
-              <strong>robotics</strong>, and the next wave of technology — through workshops, demos, and
-              real projects.
+              <strong>robotics</strong>, and the next wave of technology &mdash; through workshops, real demos, and
+              collaborative builds.
             </p>
 
             <div class="hero-actions reveal">
-              <a class="btn btn-primary" href="#join">Join the club</a>
-              <a class="btn btn-ghost" href="#events">Featured workshop</a>
+              <a class="btn btn-primary" href="#join">
+                <span class="btn-icon" aria-hidden="true">⚡</span>
+                Join the club
+              </a>
+              <a class="btn btn-ghost" href="#events">
+                <span class="btn-icon" aria-hidden="true">📅</span>
+                Featured workshop
+              </a>
             </div>
 
             <dl class="hero-stats reveal" aria-label="Club highlights">
               <div class="stat">
-                <dt>Weekly</dt>
-                <dd>Workshops & build nights</dd>
+                <dt>60+</dt>
+                <dd>Members &amp; growing</dd>
               </div>
               <div class="stat">
-                <dt>Real demos</dt>
-                <dd>Ship portfolio projects</dd>
+                <dt>Weekly</dt>
+                <dd>Workshops &amp; builds</dd>
               </div>
               <div class="stat">
                 <dt>Open to all</dt>
@@ -120,11 +130,11 @@
                   <span class="chip-dot" aria-hidden="true"></span>
                   <span>Next up: Featured Workshop</span>
                 </span>
-                <span class="hero-chip hero-chip-gold">Hands-on • Beginner-friendly</span>
+                <span class="hero-chip hero-chip-gold">Hands-on &bull; Beginner-friendly</span>
               </div>
 
               <div class="hero-image-caption">
-                <p class="hero-image-title">Quinnipiac’s Future AI Lab</p>
+                <p class="hero-image-title">Quinnipiac's Future AI Lab</p>
                 <p class="hero-image-sub">
                   Student-built demos, workshops, and robotics — powered by electric blue + Quinnipiac gold.
                 </p>
@@ -141,55 +151,75 @@
                 </div>
                 <div class="float-card float-card-3">
                   <p class="float-kicker">Demo Night</p>
-                  <p class="float-title">Ship • Show • Improve</p>
+                  <p class="float-title">Ship &bull; Show &bull; Improve</p>
                 </div>
               </div>
             </figure>
           </div>
         </div>
+
+        <!-- Trust bar -->
+        <div class="container hero-trust reveal">
+          <p class="trust-label">Built with &amp; used by students across</p>
+          <ul class="trust-list" aria-label="Disciplines represented">
+            <li>Computer Science</li>
+            <li>Data Science</li>
+            <li>Cybersecurity</li>
+            <li>Business Analytics</li>
+            <li>Pre-Med &amp; Health Informatics</li>
+            <li>Engineering</li>
+          </ul>
+        </div>
       </section>
 
+      <!-- About -->
       <section id="about" class="section">
         <div class="container">
           <header class="section-head reveal">
-            <h2>About the club</h2>
+            <span class="section-label">What we do</span>
+            <h2>Built for students who want to <em>actually build.</em></h2>
             <p>
-              We’re a student-led community exploring real-world AI and emerging technologies through
+              We're a student-led community exploring real-world AI and emerging technologies through
               workshops, guest speakers, and collaborative projects.
             </p>
           </header>
 
           <div class="feature-grid">
             <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">🧠</div>
               <h3>Learn by doing</h3>
               <p>
                 Weekly sessions with practical topics like prompt engineering, model evaluation, data
-                visualization, and responsible AI.
+                visualization, and responsible AI. No fluff &mdash; just skills you can use.
               </p>
             </article>
             <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">🛠</div>
               <h3>Build together</h3>
               <p>
                 Team up on beginner-friendly and advanced projects — from chatbots and computer vision to
-                campus-focused tools.
+                campus-focused tools you can demo in interviews.
               </p>
             </article>
             <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">🌐</div>
               <h3>Grow your network</h3>
               <p>
                 Connect with alumni, researchers, and industry speakers. Share internships, research, and
-                hackathon opportunities.
+                hackathon opportunities with people who actually care about tech.
               </p>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- Events -->
       <section id="events" class="section section-alt">
         <div class="container">
           <header class="section-head reveal">
-            <h2>Upcoming events</h2>
-            <p>Workshops, guest talks, and build nights designed for busy students.</p>
+            <span class="section-label">Upcoming events</span>
+            <h2>Workshops, talks &amp; build nights.</h2>
+            <p>Designed for busy students. Show up, build something, leave with a demo.</p>
           </header>
 
           <article class="featured-event reveal" aria-label="Featured AI workshop">
@@ -198,11 +228,11 @@
               <span>Featured AI Workshop</span>
             </div>
             <div class="featured-event-body">
-              <p class="featured-event-date">Apr 22 • 6:30 PM • SB 101</p>
+              <p class="featured-event-date">Apr 22 &bull; 6:30 PM &bull; SB 101</p>
               <h3 class="featured-event-title">Build a Mini-RAG App (Retrieval + Chat) in 60 Minutes</h3>
               <p class="featured-event-desc">
                 Bring a laptop and leave with a working demo: ingest a few documents, retrieve relevant
-                snippets, and chat with sources. We’ll cover prompting, chunking, and simple evaluation.
+                snippets, and chat with sources. We'll cover prompting, chunking, and simple evaluation.
               </p>
               <ul class="featured-event-points" aria-label="Workshop highlights">
                 <li>Starter template provided</li>
@@ -212,16 +242,16 @@
             </div>
             <div class="featured-event-cta">
               <a class="btn btn-primary btn-block" href="#join">Reserve a spot</a>
-              <a class="btn btn-ghost btn-block" href="#projects">See demo-style projects</a>
-              <p class="featured-event-note">Limited seating • Walk-ins welcome if space allows</p>
+              <a class="btn btn-ghost btn-block" href="#featured-projects">See demo-style projects</a>
+              <p class="featured-event-note">Limited seating &bull; Walk-ins welcome if space allows</p>
             </div>
           </article>
 
           <div class="card-grid event-grid">
-            <article class="card reveal">
+            <article class="card reveal" style="--reveal-delay: 0ms">
               <div class="card-top">
                 <p class="pill">Workshop</p>
-                <p class="card-date">Apr 18 • 6:00 PM</p>
+                <p class="card-date">Apr 18 &bull; 6:00 PM</p>
               </div>
               <h3>Intro to AI Tooling for Students</h3>
               <p>
@@ -235,12 +265,12 @@
               <a class="card-link" href="#join">RSVP via club email <span aria-hidden="true">→</span></a>
             </article>
 
-            <article class="card reveal">
+            <article class="card reveal" style="--reveal-delay: 80ms">
               <div class="card-top">
                 <p class="pill pill-gold">Guest Speaker</p>
-                <p class="card-date">Apr 25 • 5:30 PM</p>
+                <p class="card-date">Apr 25 &bull; 5:30 PM</p>
               </div>
-              <h3>AI in Healthcare & Ethics</h3>
+              <h3>AI in Healthcare &amp; Ethics</h3>
               <p>
                 Learn how AI is used in clinical settings and why transparency, bias testing, and human
                 oversight matter.
@@ -252,32 +282,151 @@
               <a class="card-link" href="#join">Get the link <span aria-hidden="true">→</span></a>
             </article>
 
-            <article class="card reveal">
+            <article class="card reveal" style="--reveal-delay: 160ms">
               <div class="card-top">
                 <p class="pill">Build Night</p>
-                <p class="card-date">May 2 • 6:30 PM</p>
+                <p class="card-date">May 2 &bull; 6:30 PM</p>
               </div>
               <h3>Project Sprint: Campus Helper Bot</h3>
               <p>
-                Form teams, pick a feature, and ship a demo. Beginners welcome — we’ll pair you with a
+                Form teams, pick a feature, and ship a demo. Beginners welcome — we'll pair you with a
                 mentor and starter template.
               </p>
               <div class="card-meta">
                 <span class="meta-item">📍 Library Lab</span>
                 <span class="meta-item">⏱ 90 min</span>
               </div>
-              <a class="card-link" href="#projects">See project ideas <span aria-hidden="true">→</span></a>
+              <a class="card-link" href="#featured-projects">See project ideas <span aria-hidden="true">→</span></a>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <!-- Featured Projects (NEW) -->
+      <section id="featured-projects" class="section">
         <div class="container">
           <header class="section-head reveal">
-            <h2>Student AI projects</h2>
+            <span class="section-label">Student work</span>
+            <h2>Featured projects from our members.</h2>
             <p>
-              Real club demos built by students — designed to be shippable, showable, and easy to contribute to.
+              Portfolio-quality work built by QU students &mdash; real problems, real code, real results.
+            </p>
+          </header>
+
+          <div class="fp-grid">
+            <!-- Card 1: AI Study Assistant -->
+            <article class="fp-card fp-card--blue reveal" style="--reveal-delay: 0ms">
+              <div class="fp-card-media" aria-hidden="true">
+                <div class="fp-icon">🤖</div>
+                <div class="fp-media-grid"></div>
+              </div>
+              <div class="fp-card-body">
+                <div class="fp-card-top">
+                  <span class="fp-status fp-status--active">
+                    <span class="fp-status-dot"></span>
+                    Live Demo
+                  </span>
+                  <span class="fp-year">Spring '25</span>
+                </div>
+                <h3 class="fp-title">AI Study Assistant</h3>
+                <p class="fp-desc">
+                  Upload your lecture notes and get instant summaries, auto-generated flashcards, and practice
+                  quizzes. Built to reduce hallucinations with source-grounded retrieval.
+                </p>
+                <ul class="fp-tags" aria-label="Tech stack">
+                  <li class="fp-tag">RAG</li>
+                  <li class="fp-tag">NLP</li>
+                  <li class="fp-tag">React</li>
+                  <li class="fp-tag">Python</li>
+                </ul>
+                <div class="fp-actions">
+                  <a class="btn btn-primary btn-sm" href="#join">View Demo →</a>
+                  <a class="btn btn-ghost btn-sm" href="#join">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Smart Campus Scheduler -->
+            <article class="fp-card fp-card--gold reveal" style="--reveal-delay: 100ms">
+              <div class="fp-card-media" aria-hidden="true">
+                <div class="fp-icon">📆</div>
+                <div class="fp-media-grid"></div>
+              </div>
+              <div class="fp-card-body">
+                <div class="fp-card-top">
+                  <span class="fp-status fp-status--build">
+                    <span class="fp-status-dot"></span>
+                    In Progress
+                  </span>
+                  <span class="fp-year">Spring '25</span>
+                </div>
+                <h3 class="fp-title">Smart Campus Scheduler</h3>
+                <p class="fp-desc">
+                  An AI-powered scheduling tool that optimizes study blocks, club meetings, and deadlines using
+                  your course load and calendar. Integrates with QU's academic calendar.
+                </p>
+                <ul class="fp-tags" aria-label="Tech stack">
+                  <li class="fp-tag">ML</li>
+                  <li class="fp-tag">Calendar API</li>
+                  <li class="fp-tag">TypeScript</li>
+                  <li class="fp-tag">UX</li>
+                </ul>
+                <div class="fp-actions">
+                  <a class="btn btn-primary btn-sm" href="#join">Follow Progress →</a>
+                  <a class="btn btn-ghost btn-sm" href="#join">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Facial Recognition Ethics Research -->
+            <article class="fp-card fp-card--research reveal" style="--reveal-delay: 200ms">
+              <div class="fp-card-media" aria-hidden="true">
+                <div class="fp-icon">🔬</div>
+                <div class="fp-media-grid"></div>
+              </div>
+              <div class="fp-card-body">
+                <div class="fp-card-top">
+                  <span class="fp-status fp-status--research">
+                    <span class="fp-status-dot"></span>
+                    Research
+                  </span>
+                  <span class="fp-year">Senior Thesis</span>
+                </div>
+                <h3 class="fp-title">Facial Recognition Ethics Research</h3>
+                <p class="fp-desc">
+                  A peer-reviewed study examining algorithmic bias in facial recognition systems within national
+                  defense contexts. Includes original survey data from 60+ respondents across veteran, civilian, and
+                  active-duty populations.
+                </p>
+                <ul class="fp-tags" aria-label="Research areas">
+                  <li class="fp-tag">Computer Vision</li>
+                  <li class="fp-tag">Ethics</li>
+                  <li class="fp-tag">Survey Research</li>
+                  <li class="fp-tag">Policy</li>
+                </ul>
+                <div class="fp-actions">
+                  <a class="btn btn-primary btn-sm" href="#join">Read Abstract →</a>
+                  <a class="btn btn-ghost btn-sm" href="#spotlight">Meet the team</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-foot reveal">
+            <p class="foot-label">Working on something? We'll help you ship it.</p>
+            <a class="btn btn-ghost" href="#join">Bring your idea →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- All Projects (existing demo cards) -->
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-label">Club builds</span>
+            <h2>Current builds &amp; open demos.</h2>
+            <p>
+              Real club projects built by students &mdash; designed to be shippable, showable, and easy to contribute to.
             </p>
           </header>
 
@@ -317,7 +466,7 @@
                   <span class="demo-status demo-status-live">Shipping</span>
                 </div>
                 <p class="demo-desc">
-                  A clean dashboard template for student research: charts, filters, and a “data story” page
+                  A clean dashboard template for student research: charts, filters, and a "data story" page
                   for presentations.
                 </p>
                 <ul class="tag-row" aria-label="Tech stack">
@@ -384,94 +533,110 @@
           </div>
 
           <div class="section-foot reveal">
-            <a class="btn btn-ghost" href="#join">Bring an idea — we’ll help you demo it</a>
+            <a class="btn btn-ghost" href="#join">Bring an idea — we'll help you demo it</a>
           </div>
         </div>
       </section>
 
-      <section id="spotlight" class="section section-alt">
+      <!-- Spotlight -->
+      <section id="spotlight" class="section">
         <div class="container">
           <header class="section-head reveal">
-            <h2>Leadership & member spotlight</h2>
-            <p>Meet the students organizing sessions and mentoring projects.</p>
+            <span class="section-label">Who we are</span>
+            <h2>The team building this community.</h2>
+            <p>Meet the students organizing sessions, mentoring projects, and keeping the lights on.</p>
           </header>
 
           <div class="spotlight-grid">
-            <article class="person-card reveal">
-              <div class="avatar" aria-hidden="true">
-                <span class="avatar-initials">AR</span>
-              </div>
-              <div class="person-body">
-                <h3>Alex Rivera</h3>
-                <p class="role">President • Applied AI</p>
-                <p class="bio">
-                  Focused on building approachable, real-world AI workshops and helping members ship their
-                  first demos.
-                </p>
-                <div class="person-links">
-                  <a href="#footer">Email</a>
-                  <a href="#footer">LinkedIn</a>
+            <article class="person-card reveal" style="--reveal-delay: 0ms">
+              <div class="person-card-inner">
+                <div class="avatar" aria-hidden="true">
+                  <span class="avatar-initials">AR</span>
+                </div>
+                <div class="person-body">
+                  <h3>Alex Rivera</h3>
+                  <p class="role">President &bull; Applied AI</p>
+                  <p class="bio">
+                    Focused on building approachable, real-world AI workshops and helping members ship their
+                    first demos.
+                  </p>
+                  <div class="person-links">
+                    <a href="#footer">Email</a>
+                    <a href="#footer">LinkedIn</a>
+                  </div>
                 </div>
               </div>
             </article>
 
-            <article class="person-card reveal">
-              <div class="avatar avatar-gold" aria-hidden="true">
-                <span class="avatar-initials">MJ</span>
-              </div>
-              <div class="person-body">
-                <h3>Maya Johnson</h3>
-                <p class="role">Vice President • Data & Research</p>
-                <p class="bio">
-                  Leads the project showcase program and helps students turn class work into portfolio-grade
-                  case studies.
-                </p>
-                <div class="person-links">
-                  <a href="#footer">Email</a>
-                  <a href="#footer">GitHub</a>
+            <article class="person-card reveal" style="--reveal-delay: 80ms">
+              <div class="person-card-inner">
+                <div class="avatar avatar-gold" aria-hidden="true">
+                  <span class="avatar-initials">MJ</span>
+                </div>
+                <div class="person-body">
+                  <h3>Maya Johnson</h3>
+                  <p class="role">VP &bull; Data &amp; Research</p>
+                  <p class="bio">
+                    Leads the project showcase program and helps students turn class work into portfolio-grade
+                    case studies.
+                  </p>
+                  <div class="person-links">
+                    <a href="#footer">Email</a>
+                    <a href="#footer">GitHub</a>
+                  </div>
                 </div>
               </div>
             </article>
 
-            <article class="person-card reveal">
-              <div class="avatar" aria-hidden="true">
-                <span class="avatar-initials">SK</span>
-              </div>
-              <div class="person-body">
-                <h3>Sam Kim</h3>
-                <p class="role">Tech Lead • Robotics</p>
-                <p class="bio">
-                  Runs build nights and maintains starter templates for web, Python, and hardware-focused
-                  projects.
-                </p>
-                <div class="person-links">
-                  <a href="#footer">Discord</a>
-                  <a href="#footer">GitHub</a>
+            <article class="person-card reveal" style="--reveal-delay: 160ms">
+              <div class="person-card-inner">
+                <div class="avatar" aria-hidden="true">
+                  <span class="avatar-initials">SK</span>
+                </div>
+                <div class="person-body">
+                  <h3>Sam Kim</h3>
+                  <p class="role">Tech Lead &bull; Robotics</p>
+                  <p class="bio">
+                    Runs build nights and maintains starter templates for web, Python, and hardware-focused
+                    projects.
+                  </p>
+                  <div class="person-links">
+                    <a href="#footer">Discord</a>
+                    <a href="#footer">GitHub</a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
+
+          <!-- Join the team CTA -->
+          <div class="spotlight-cta reveal">
+            <p>Want to help lead something? We're always looking for workshop organizers, project mentors, and event leads.</p>
+            <a class="btn btn-ghost" href="#join">Get involved →</a>
+          </div>
         </div>
       </section>
 
+      <!-- Join -->
       <section id="join" class="section join">
         <div class="container">
           <div class="join-card reveal">
             <div class="join-copy">
-              <h2>Join the club</h2>
+              <span class="section-label">Ready?</span>
+              <h2>Join the club.</h2>
               <p>
                 Make this semester the one where you actually ship something. Meet teammates, learn modern AI
                 workflows, and leave with demos you can show in interviews.
               </p>
 
               <ul class="checklist" aria-label="Member benefits">
-                <li>Fast-start workshops with templates</li>
-                <li>Project squads with mentors</li>
-                <li>Demo nights + portfolio support</li>
+                <li>Fast-start workshops with templates &amp; mentors</li>
+                <li>Project squads — team-based builds from day one</li>
+                <li>Demo nights + portfolio support for your resume</li>
               </ul>
 
               <div class="join-actions">
-                <a class="btn btn-primary" href="mailto:ai-club@quinnipiac.edu?subject=Join%20the%20AI%20Club">
+                <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#482921652b243d2a08393d212626213821292b662d2c3d773b3d2a222d2b3c75022721266d7a783c202d6d7a7809016d7a780b243d2a">
                   Email to join
                 </a>
                 <a class="btn btn-ghost" href="#events">See the featured workshop</a>
@@ -496,10 +661,10 @@
               <div class="field">
                 <label for="interest">Interest</label>
                 <select id="interest" name="interest">
-                  <option value="ai">AI & Machine Learning</option>
-                  <option value="data">Data & Analytics</option>
-                  <option value="robotics">Robotics & Hardware</option>
-                  <option value="product">Product & UX</option>
+                  <option value="ai">AI &amp; Machine Learning</option>
+                  <option value="data">Data &amp; Analytics</option>
+                  <option value="robotics">Robotics &amp; Hardware</option>
+                  <option value="product">Product &amp; UX</option>
                   <option value="other">Not sure yet</option>
                 </select>
               </div>
@@ -508,8 +673,7 @@
                 Get membership info + next meeting details
               </button>
               <p class="form-note">
-                Demo form for the landing page. Replace with Google Forms, a campus org platform, or your
-                mailing list provider.
+                Demo form — replace with Google Forms, a campus org platform, or your mailing list provider.
               </p>
             </form>
           </div>
@@ -518,42 +682,54 @@
     </main>
 
     <footer id="footer" class="footer">
-      <div class="container footer-grid">
+      <div class="container footer-top-grid">
         <div class="footer-brand">
           <div class="footer-mark" aria-hidden="true"></div>
           <div>
-            <p class="footer-title">AI & Emerging Technology Club</p>
-            <p class="footer-sub">Quinnipiac University • Hamden, CT</p>
+            <p class="footer-title">QU AI &amp; Emerging Technology Club</p>
+            <p class="footer-sub">Quinnipiac University &bull; Hamden, CT</p>
+            <p class="footer-tagline">Building the next generation of AI-literate professionals.</p>
           </div>
         </div>
 
-        <div class="footer-col">
-          <p class="footer-head">Contact</p>
-          <ul class="footer-links">
-            <li><a href="mailto:ai-club@quinnipiac.edu">ai-club@quinnipiac.edu</a></li>
-            <li><a href="#join">Join mailing list</a></li>
-            <li><a href="#events">Attend an event</a></li>
-          </ul>
-        </div>
+        <div class="footer-nav-group">
+          <div class="footer-col">
+            <p class="footer-head">Explore</p>
+            <ul class="footer-links">
+              <li><a href="#about">About the club</a></li>
+              <li><a href="#events">Upcoming events</a></li>
+              <li><a href="#featured-projects">Featured projects</a></li>
+              <li><a href="#spotlight">Meet the team</a></li>
+            </ul>
+          </div>
 
-        <div class="footer-col">
-          <p class="footer-head">Social</p>
-          <ul class="footer-links">
-            <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
-            <li><a href="#" aria-label="LinkedIn (placeholder link)">LinkedIn</a></li>
-            <li><a href="#" aria-label="Discord (placeholder link)">Discord</a></li>
-            <li><a href="#" aria-label="GitHub (placeholder link)">GitHub</a></li>
-          </ul>
+          <div class="footer-col">
+            <p class="footer-head">Contact</p>
+            <ul class="footer-links">
+              <li><a href="/cdn-cgi/l/email-protection#a0c1c98dc3ccd5c2e0d1d5c9cecec9d0c9c1c38ec5c4d5"><span class="__cf_email__" data-cfemail="3150581c525d4453714044585f5f58415850521f545544">[email&#160;protected]</span></a></li>
+              <li><a href="#join">Join mailing list</a></li>
+              <li><a href="#events">Attend an event</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-head">Community</p>
+            <ul class="footer-links">
+              <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
+              <li><a href="#" aria-label="LinkedIn (placeholder link)">LinkedIn</a></li>
+              <li><a href="#" aria-label="Discord (placeholder link)">Discord</a></li>
+              <li><a href="#" aria-label="GitHub (placeholder link)">GitHub</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class="container footer-bottom">
-        <p>© <span id="year"></span> QU AI & Emerging Technology Club. All rights reserved.</p>
-        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        <p>&copy; <span id="year"></span> QU AI &amp; Emerging Technology Club. All rights reserved.</p>
+        <a class="back-to-top" href="#top" aria-label="Back to top">Back to top ↑</a>
       </div>
     </footer>
 
-    <script src="./script.js" defer></script>
+    <script src="./script.js"></script>
   </body>
 </html>
-
