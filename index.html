@@ -83,13 +83,13 @@
             </p>
 
             <div class="hero-actions reveal">
-              <a class="btn btn-primary" href="#join">
+              <a class="btn btn-primary btn-cta-glow" href="#join">
                 <span class="btn-icon" aria-hidden="true">⚡</span>
                 Join the club
               </a>
-              <a class="btn btn-ghost" href="#events">
-                <span class="btn-icon" aria-hidden="true">📅</span>
-                Featured workshop
+              <a class="btn btn-ghost" href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icon" aria-hidden="true">💻</span>
+                View Source Code
               </a>
             </div>
 
@@ -213,6 +213,82 @@
         </div>
       </section>
 
+
+      <!-- Choose Your Path -->
+      <section id="paths" class="section section-alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-label">Find your fit</span>
+            <h2>Choose your path.</h2>
+            <p>Not sure where to start? Pick the profile that sounds most like you &mdash; we&rsquo;ll show you exactly where to begin.</p>
+          </header>
+
+          <div class="path-grid">
+
+            <button class="path-card reveal" data-path="builder" style="--reveal-delay:0ms" type="button">
+              <div class="path-icon" aria-hidden="true">🔨</div>
+              <h3 class="path-name">The Builder</h3>
+              <p class="path-tagline">I want to ship something real.</p>
+              <div class="path-detail" aria-hidden="true">
+                <p>You thrive on making things. You&rsquo;ll love our Build Nights, starter templates, and project squads where you ship demos from day one.</p>
+                <ul class="path-list">
+                  <li>Weekly build sessions with mentors</li>
+                  <li>Starter templates in Python, JS, and more</li>
+                  <li>Demo Night to show off your work</li>
+                </ul>
+                <a class="btn btn-primary btn-sm" href="#join">Start building &rarr;</a>
+              </div>
+            </button>
+
+            <button class="path-card reveal" data-path="researcher" style="--reveal-delay:80ms" type="button">
+              <div class="path-icon" aria-hidden="true">🔬</div>
+              <h3 class="path-name">The Researcher</h3>
+              <p class="path-tagline">I want to understand AI deeply.</p>
+              <div class="path-detail" aria-hidden="true">
+                <p>You love papers, theory, and asking hard questions. You&rsquo;ll fit right in with our guest speakers, reading groups, and thesis support network.</p>
+                <ul class="path-list">
+                  <li>Guest speakers from industry &amp; academia</li>
+                  <li>Research paper reading groups</li>
+                  <li>Senior thesis showcase support</li>
+                </ul>
+                <a class="btn btn-primary btn-sm" href="#join">Start exploring &rarr;</a>
+              </div>
+            </button>
+
+            <button class="path-card reveal" data-path="analyst" style="--reveal-delay:160ms" type="button">
+              <div class="path-icon" aria-hidden="true">📊</div>
+              <h3 class="path-name">The Analyst</h3>
+              <p class="path-tagline">I work with data and insights.</p>
+              <div class="path-detail" aria-hidden="true">
+                <p>You&rsquo;re comfortable with datasets, visualizations, and turning numbers into stories. We&rsquo;ll help you build real dashboards and analytics projects.</p>
+                <ul class="path-list">
+                  <li>Data visualization workshops</li>
+                  <li>Open dataset project starters</li>
+                  <li>Portfolio-grade case studies</li>
+                </ul>
+                <a class="btn btn-primary btn-sm" href="#join">Start analyzing &rarr;</a>
+              </div>
+            </button>
+
+            <button class="path-card reveal" data-path="connector" style="--reveal-delay:240ms" type="button">
+              <div class="path-icon" aria-hidden="true">🌐</div>
+              <h3 class="path-name">The Connector</h3>
+              <p class="path-tagline">I care about AI, ethics &amp; people.</p>
+              <div class="path-detail" aria-hidden="true">
+                <p>You think about who AI affects, not just how it works. You&rsquo;ll love our ethics panels, policy discussions, and community-impact project tracks.</p>
+                <ul class="path-list">
+                  <li>AI ethics &amp; policy workshops</li>
+                  <li>Community-impact project tracks</li>
+                  <li>Interdisciplinary collaboration</li>
+                </ul>
+                <a class="btn btn-primary btn-sm" href="#join">Get connected &rarr;</a>
+              </div>
+            </button>
+
+          </div>
+        </div>
+      </section>
+
       <!-- Events -->
       <section id="events" class="section section-alt">
         <div class="container">
@@ -241,7 +317,7 @@
               </ul>
             </div>
             <div class="featured-event-cta">
-              <a class="btn btn-primary btn-block" href="#join">Reserve a spot</a>
+              <a class="btn btn-primary btn-cta-glow btn-block" href="#join">Reserve a spot</a>
               <a class="btn btn-ghost btn-block" href="#featured-projects">See demo-style projects</a>
               <p class="featured-event-note">Limited seating &bull; Walk-ins welcome if space allows</p>
             </div>
@@ -262,7 +338,17 @@
                 <span class="meta-item">📍 SB 101</span>
                 <span class="meta-item">⏱ 60 min</span>
               </div>
-              <a class="card-link" href="#join">RSVP via club email <span aria-hidden="true">→</span></a>
+              <div class="card-bottom-row">
+                <a class="card-link" href="#join">RSVP via club email <span aria-hidden="true">→</span></a>
+                <button class="card-expand-btn" type="button" aria-expanded="false" aria-label="Show event details">
+                  <span class="card-expand-icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+              <div class="card-expand-panel" hidden>
+                <div class="expand-row"><span class="expand-label">Bring</span><span class="expand-val">Laptop + Google Colab (free)</span></div>
+                <div class="expand-row"><span class="expand-label">Level</span><span class="expand-val">Beginner-friendly</span></div>
+                <div class="expand-row"><span class="expand-label">Format</span><span class="expand-val">Live demo + guided exercises</span></div>
+              </div>
             </article>
 
             <article class="card reveal" style="--reveal-delay: 80ms">
@@ -279,7 +365,17 @@
                 <span class="meta-item">📍 Online</span>
                 <span class="meta-item">⏱ 45 min</span>
               </div>
-              <a class="card-link" href="#join">Get the link <span aria-hidden="true">→</span></a>
+              <div class="card-bottom-row">
+                <a class="card-link" href="#join">Get the link <span aria-hidden="true">→</span></a>
+                <button class="card-expand-btn" type="button" aria-expanded="false" aria-label="Show event details">
+                  <span class="card-expand-icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+              <div class="card-expand-panel" hidden>
+                <div class="expand-row"><span class="expand-label">Bring</span><span class="expand-val">Nothing — just curiosity</span></div>
+                <div class="expand-row"><span class="expand-label">Level</span><span class="expand-val">All levels welcome</span></div>
+                <div class="expand-row"><span class="expand-label">Format</span><span class="expand-val">Talk + open Q&amp;A</span></div>
+              </div>
             </article>
 
             <article class="card reveal" style="--reveal-delay: 160ms">
@@ -296,125 +392,181 @@
                 <span class="meta-item">📍 Library Lab</span>
                 <span class="meta-item">⏱ 90 min</span>
               </div>
-              <a class="card-link" href="#featured-projects">See project ideas <span aria-hidden="true">→</span></a>
+              <div class="card-bottom-row">
+                <a class="card-link" href="#featured-projects">See project ideas <span aria-hidden="true">→</span></a>
+                <button class="card-expand-btn" type="button" aria-expanded="false" aria-label="Show event details">
+                  <span class="card-expand-icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+              <div class="card-expand-panel" hidden>
+                <div class="expand-row"><span class="expand-label">Bring</span><span class="expand-val">Laptop + ideas (mentors provided)</span></div>
+                <div class="expand-row"><span class="expand-label">Level</span><span class="expand-val">All levels, teams formed on arrival</span></div>
+                <div class="expand-row"><span class="expand-label">Format</span><span class="expand-val">Team formation + sprint build</span></div>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Featured Projects (NEW) -->
+
+      <!-- Prompt Lab -->
+      <section id="prompt-lab" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-label">Prompt Lab</span>
+            <h2>Your AI prompt starter kit.</h2>
+            <p>Stuck on where to begin? Grab a prompt, remix it, and build something. New prompt every week &mdash; or generate your own.</p>
+          </header>
+
+          <div class="prompt-card reveal">
+            <div class="prompt-card-header">
+              <div class="prompt-week-badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span>Prompt of the Week</span>
+              </div>
+              <span class="prompt-tags-chip" id="prompt-tags">RAG &bull; Intermediate</span>
+            </div>
+
+            <div class="prompt-card-body">
+              <blockquote class="prompt-text" id="prompt-display">Build a mini-RAG pipeline: ingest 3&ndash;5 PDFs, chunk them, embed with a free model, and answer questions with source citations. Measure how often answers reference the right document.</blockquote>
+              <p class="prompt-why" id="prompt-why">RAG is one of the most in-demand patterns in production AI. Knowing how to build one gives you a real edge in interviews and internship projects.</p>
+            </div>
+
+            <div class="prompt-card-footer">
+              <div class="prompt-actions">
+                <button class="btn btn-primary btn-sm btn-cta-glow" id="generate-prompt" type="button">
+                  <span aria-hidden="true">⚡</span> Surprise me
+                </button>
+                <button class="btn btn-ghost btn-sm" id="copy-prompt" type="button">
+                  Copy prompt
+                </button>
+              </div>
+              <p class="prompt-hint">Click &ldquo;Surprise me&rdquo; for a random AI starter prompt.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
       <section id="featured-projects" class="section">
         <div class="container">
           <header class="section-head reveal">
             <span class="section-label">Student work</span>
-            <h2>Featured projects from our members.</h2>
+            <h2>Featured Student Innovation Projects.</h2>
             <p>
-              Portfolio-quality work built by QU students &mdash; real problems, real code, real results.
+              Real builds from QU students &mdash; shipped to GitHub, open to explore, and ready to fork.
             </p>
           </header>
 
           <div class="fp-grid">
-            <!-- Card 1: AI Study Assistant -->
+
+            <!-- Card 1: Smart Parking Assistant -->
             <article class="fp-card fp-card--blue reveal" style="--reveal-delay: 0ms">
               <div class="fp-card-media" aria-hidden="true">
-                <div class="fp-icon">🤖</div>
+                <div class="fp-media-glow fp-glow--blue"></div>
+                <div class="fp-icon fp-icon--parking">🅿️</div>
                 <div class="fp-media-grid"></div>
+                <div class="fp-card-peek" aria-hidden="true"><span>Explore App Repo →</span></div>
               </div>
               <div class="fp-card-body">
                 <div class="fp-card-top">
                   <span class="fp-status fp-status--active">
                     <span class="fp-status-dot"></span>
-                    Live Demo
+                    Campus Utility
                   </span>
-                  <span class="fp-year">Spring '25</span>
+                  <span class="fp-year">Student Build</span>
                 </div>
-                <h3 class="fp-title">AI Study Assistant</h3>
+                <h3 class="fp-title">Smart Parking Assistant</h3>
                 <p class="fp-desc">
-                  Upload your lecture notes and get instant summaries, auto-generated flashcards, and practice
-                  quizzes. Built to reduce hallucinations with source-grounded retrieval.
+                  A smart campus utility concept focused on improving parking efficiency through lot awareness,
+                  convenience workflows, and systems thinking.
                 </p>
                 <ul class="fp-tags" aria-label="Tech stack">
-                  <li class="fp-tag">RAG</li>
-                  <li class="fp-tag">NLP</li>
-                  <li class="fp-tag">React</li>
-                  <li class="fp-tag">Python</li>
+                  <li class="fp-tag">Systems Design</li>
+                  <li class="fp-tag">Campus UX</li>
+                  <li class="fp-tag">Utility App</li>
+                  <li class="fp-tag">Workflow</li>
                 </ul>
                 <div class="fp-actions">
-                  <a class="btn btn-primary btn-sm" href="#join">View Demo →</a>
-                  <a class="btn btn-ghost btn-sm" href="#join">GitHub</a>
+                  <a class="btn btn-primary btn-sm" href="https://github.com/Pkwiatkowski-ssj/smart-parking-app" target="_blank" rel="noopener noreferrer">Explore App Repo →</a>
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/Pkwiatkowski-ssj/smart-parking-app" target="_blank" rel="noopener noreferrer">See Code</a>
                 </div>
               </div>
             </article>
 
-            <!-- Card 2: Smart Campus Scheduler -->
+            <!-- Card 2: Fortune Cookie Prompt Generator -->
             <article class="fp-card fp-card--gold reveal" style="--reveal-delay: 100ms">
               <div class="fp-card-media" aria-hidden="true">
-                <div class="fp-icon">📆</div>
+                <div class="fp-media-glow fp-glow--gold"></div>
+                <div class="fp-icon fp-icon--fortune">🥠</div>
                 <div class="fp-media-grid"></div>
+                <div class="fp-card-peek fp-card-peek--gold" aria-hidden="true"><span>Fork the Project →</span></div>
               </div>
               <div class="fp-card-body">
                 <div class="fp-card-top">
                   <span class="fp-status fp-status--build">
                     <span class="fp-status-dot"></span>
-                    In Progress
+                    Open Source
                   </span>
-                  <span class="fp-year">Spring '25</span>
+                  <span class="fp-year">Student Build</span>
                 </div>
-                <h3 class="fp-title">Smart Campus Scheduler</h3>
+                <h3 class="fp-title">Fortune Cookie Prompt Generator</h3>
                 <p class="fp-desc">
-                  An AI-powered scheduling tool that optimizes study blocks, club meetings, and deadlines using
-                  your course load and calendar. Integrates with QU's academic calendar.
+                  A fun creative coding project where users generate dynamic fortunes and can fork the project
+                  to contribute their own prompt ideas and customizations.
                 </p>
                 <ul class="fp-tags" aria-label="Tech stack">
-                  <li class="fp-tag">ML</li>
-                  <li class="fp-tag">Calendar API</li>
-                  <li class="fp-tag">TypeScript</li>
-                  <li class="fp-tag">UX</li>
+                  <li class="fp-tag">Creative Coding</li>
+                  <li class="fp-tag">Prompt Design</li>
+                  <li class="fp-tag">JavaScript</li>
+                  <li class="fp-tag">Open Source</li>
                 </ul>
                 <div class="fp-actions">
-                  <a class="btn btn-primary btn-sm" href="#join">Follow Progress →</a>
-                  <a class="btn btn-ghost btn-sm" href="#join">GitHub</a>
+                  <a class="btn btn-primary btn-sm fp-btn--gold" href="https://github.com/Pkwiatkowski-ssj/FortuneCookieGenerator" target="_blank" rel="noopener noreferrer">Fork the Project →</a>
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/Pkwiatkowski-ssj/FortuneCookieGenerator" target="_blank" rel="noopener noreferrer">See Code</a>
                 </div>
               </div>
             </article>
 
-            <!-- Card 3: Facial Recognition Ethics Research -->
-            <article class="fp-card fp-card--research reveal" style="--reveal-delay: 200ms">
+            <!-- Card 3: Hive Heroes Uprising -->
+            <article class="fp-card fp-card--green reveal" style="--reveal-delay: 200ms">
               <div class="fp-card-media" aria-hidden="true">
-                <div class="fp-icon">🔬</div>
+                <div class="fp-media-glow fp-glow--green"></div>
+                <div class="fp-icon fp-icon--game">🐝</div>
                 <div class="fp-media-grid"></div>
+                <div class="fp-card-peek fp-card-peek--green" aria-hidden="true"><span>View Game Repo →</span></div>
               </div>
               <div class="fp-card-body">
                 <div class="fp-card-top">
-                  <span class="fp-status fp-status--research">
+                  <span class="fp-status fp-status--game">
                     <span class="fp-status-dot"></span>
-                    Research
+                    Game Dev
                   </span>
-                  <span class="fp-year">Senior Thesis</span>
+                  <span class="fp-year">Student Build</span>
                 </div>
-                <h3 class="fp-title">Facial Recognition Ethics Research</h3>
+                <h3 class="fp-title">Hive Heroes Uprising</h3>
                 <p class="fp-desc">
-                  A peer-reviewed study examining algorithmic bias in facial recognition systems within national
-                  defense contexts. Includes original survey data from 60+ respondents across veteran, civilian, and
-                  active-duty populations.
+                  A bee-themed student game development project focused on interactive mechanics, world
+                  building, and gameplay systems.
                 </p>
-                <ul class="fp-tags" aria-label="Research areas">
-                  <li class="fp-tag">Computer Vision</li>
-                  <li class="fp-tag">Ethics</li>
-                  <li class="fp-tag">Survey Research</li>
-                  <li class="fp-tag">Policy</li>
+                <ul class="fp-tags" aria-label="Tech stack">
+                  <li class="fp-tag">Game Dev</li>
+                  <li class="fp-tag">Java</li>
+                  <li class="fp-tag">World Building</li>
+                  <li class="fp-tag">Gameplay</li>
                 </ul>
                 <div class="fp-actions">
-                  <a class="btn btn-primary btn-sm" href="#join">Read Abstract →</a>
-                  <a class="btn btn-ghost btn-sm" href="#spotlight">Meet the team</a>
+                  <a class="btn btn-primary btn-sm fp-btn--green" href="https://github.com/Pkwiatkowski-ssj/HiveHeroes-Uprising" target="_blank" rel="noopener noreferrer">View Game Repo →</a>
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/Pkwiatkowski-ssj/HiveHeroes-Uprising" target="_blank" rel="noopener noreferrer">See Code</a>
                 </div>
               </div>
             </article>
+
           </div>
 
           <div class="section-foot reveal">
             <p class="foot-label">Working on something? We'll help you ship it.</p>
-            <a class="btn btn-ghost" href="#join">Bring your idea →</a>
+            <a class="btn btn-ghost" href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">View all repos on GitHub →</a>
           </div>
         </div>
       </section>
@@ -450,8 +602,8 @@
                   <li class="tag">RAG</li>
                 </ul>
                 <div class="demo-links">
-                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
-                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                  <a href="#join" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#featured-projects" aria-label="Demo (placeholder link)">Demo</a>
                 </div>
               </div>
             </article>
@@ -475,8 +627,8 @@
                   <li class="tag">Open Data</li>
                 </ul>
                 <div class="demo-links">
-                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
-                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                  <a href="#join" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#featured-projects" aria-label="Demo (placeholder link)">Demo</a>
                 </div>
               </div>
             </article>
@@ -500,8 +652,8 @@
                   <li class="tag">Docs</li>
                 </ul>
                 <div class="demo-links">
-                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
-                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                  <a href="#join" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#featured-projects" aria-label="Demo (placeholder link)">Demo</a>
                 </div>
               </div>
             </article>
@@ -525,8 +677,8 @@
                   <li class="tag">Edge AI</li>
                 </ul>
                 <div class="demo-links">
-                  <a href="#" aria-label="GitHub (placeholder link)">GitHub</a>
-                  <a href="#" aria-label="Demo (placeholder link)">Demo</a>
+                  <a href="#join" aria-label="GitHub (placeholder link)">GitHub</a>
+                  <a href="#featured-projects" aria-label="Demo (placeholder link)">Demo</a>
                 </div>
               </div>
             </article>
@@ -542,27 +694,28 @@
       <section id="spotlight" class="section">
         <div class="container">
           <header class="section-head reveal">
-            <span class="section-label">Who we are</span>
-            <h2>The team building this community.</h2>
-            <p>Meet the students organizing sessions, mentoring projects, and keeping the lights on.</p>
+            <span class="section-label">Meet the Team</span>
+            <h2>Meet the Team.</h2>
+            <p>Meet the students and faculty behind this demo concept for the AI Innovation Student Site.</p>
           </header>
 
           <div class="spotlight-grid">
-            <article class="person-card reveal" style="--reveal-delay: 0ms">
+
+            <!-- Faculty Advisor — full-width top row -->
+            <article class="person-card person-card--advisor reveal" style="--reveal-delay: 0ms">
               <div class="person-card-inner">
-                <div class="avatar" aria-hidden="true">
-                  <span class="avatar-initials">AR</span>
+                <div class="avatar avatar-gold" aria-hidden="true">
+                  <span class="avatar-initials">RL</span>
                 </div>
                 <div class="person-body">
-                  <h3>Alex Rivera</h3>
-                  <p class="role">President &bull; Applied AI</p>
+                  <h3>Rongyu Lin</h3>
+                  <p class="role">Faculty Advisor &amp; Project Sponsor</p>
                   <p class="bio">
-                    Focused on building approachable, real-world AI workshops and helping members ship their
-                    first demos.
+                    Supports the academic direction of the project and helps connect the website concept to
+                    student learning, innovation, and applied AI.
                   </p>
                   <div class="person-links">
-                    <a href="#footer">Email</a>
-                    <a href="#footer">LinkedIn</a>
+                    <a href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">See Full Project Repo</a>
                   </div>
                 </div>
               </div>
@@ -570,19 +723,18 @@
 
             <article class="person-card reveal" style="--reveal-delay: 80ms">
               <div class="person-card-inner">
-                <div class="avatar avatar-gold" aria-hidden="true">
-                  <span class="avatar-initials">MJ</span>
+                <div class="avatar" aria-hidden="true">
+                  <span class="avatar-initials">PK</span>
                 </div>
                 <div class="person-body">
-                  <h3>Maya Johnson</h3>
-                  <p class="role">VP &bull; Data &amp; Research</p>
+                  <h3>Philip Kwiatkowski</h3>
+                  <p class="role">Project Lead &amp; Web Development</p>
                   <p class="bio">
-                    Leads the project showcase program and helps students turn class work into portfolio-grade
-                    case studies.
+                    Led the overall website direction, structure, content planning, and final implementation
+                    across Cursor, VS Code, and GitHub.
                   </p>
                   <div class="person-links">
-                    <a href="#footer">Email</a>
-                    <a href="#footer">GitHub</a>
+                    <a href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">See Full Project Repo</a>
                   </div>
                 </div>
               </div>
@@ -591,28 +743,79 @@
             <article class="person-card reveal" style="--reveal-delay: 160ms">
               <div class="person-card-inner">
                 <div class="avatar" aria-hidden="true">
-                  <span class="avatar-initials">SK</span>
+                  <span class="avatar-initials">CE</span>
                 </div>
                 <div class="person-body">
-                  <h3>Sam Kim</h3>
-                  <p class="role">Tech Lead &bull; Robotics</p>
+                  <h3>Cameron Evjen</h3>
+                  <p class="role">Content Strategy &amp; Reflection</p>
                   <p class="bio">
-                    Runs build nights and maintains starter templates for web, Python, and hardware-focused
-                    projects.
+                    Contributed to the project reflection, helped shape the team vision, and supported the
+                    written documentation of the website workflow.
                   </p>
                   <div class="person-links">
-                    <a href="#footer">Discord</a>
-                    <a href="#footer">GitHub</a>
+                    <a href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">See Full Project Repo</a>
                   </div>
                 </div>
               </div>
             </article>
-          </div>
 
-          <!-- Join the team CTA -->
-          <div class="spotlight-cta reveal">
-            <p>Want to help lead something? We're always looking for workshop organizers, project mentors, and event leads.</p>
-            <a class="btn btn-ghost" href="#join">Get involved →</a>
+            <article class="person-card reveal" style="--reveal-delay: 240ms">
+              <div class="person-card-inner">
+                <div class="avatar" aria-hidden="true">
+                  <span class="avatar-initials">EF</span>
+                </div>
+                <div class="person-body">
+                  <h3>Emme Flavin</h3>
+                  <p class="role">QA Testing &amp; Workflow Support</p>
+                  <p class="bio">
+                    Helped review the website experience, supported workflow feedback, and contributed to the
+                    testing and polishing process.
+                  </p>
+                  <div class="person-links">
+                    <a href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">See Full Project Repo</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="person-card reveal" style="--reveal-delay: 320ms">
+              <div class="person-card-inner">
+                <div class="avatar" aria-hidden="true">
+                  <span class="avatar-initials">GD</span>
+                </div>
+                <div class="person-body">
+                  <h3>Gianna Desena</h3>
+                  <p class="role">Research &amp; Design Support</p>
+                  <p class="bio">
+                    Supported the project's research and design direction by helping shape the club concept
+                    and overall presentation.
+                  </p>
+                  <div class="person-links">
+                    <a href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">See Full Project Repo</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="person-card reveal" style="--reveal-delay: 400ms">
+              <div class="person-card-inner">
+                <div class="avatar" aria-hidden="true">
+                  <span class="avatar-initials">MP</span>
+                </div>
+                <div class="person-body">
+                  <h3>Marko Paxi</h3>
+                  <p class="role">Student Outreach &amp; Documentation</p>
+                  <p class="bio">
+                    Supported communication, documentation, and the overall presentation of the project as a
+                    student innovation concept.
+                  </p>
+                  <div class="person-links">
+                    <a href="https://github.com/Pkwiatkowski-ssj/ai-innovation-student-site" target="_blank" rel="noopener noreferrer">See Full Project Repo</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
@@ -636,8 +839,8 @@
               </ul>
 
               <div class="join-actions">
-                <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#482921652b243d2a08393d212626213821292b662d2c3d773b3d2a222d2b3c75022721266d7a783c202d6d7a7809016d7a780b243d2a">
-                  Email to join
+                <a class="btn btn-primary" href="#join">
+                  Join the Club
                 </a>
                 <a class="btn btn-ghost" href="#events">See the featured workshop</a>
               </div>
@@ -669,7 +872,7 @@
                 </select>
               </div>
 
-              <button class="btn btn-primary btn-block" type="submit">
+              <button class="btn btn-primary btn-cta-glow btn-block" type="submit">
                 Get membership info + next meeting details
               </button>
               <p class="form-note">
@@ -706,7 +909,7 @@
           <div class="footer-col">
             <p class="footer-head">Contact</p>
             <ul class="footer-links">
-              <li><a href="/cdn-cgi/l/email-protection#a0c1c98dc3ccd5c2e0d1d5c9cecec9d0c9c1c38ec5c4d5"><span class="__cf_email__" data-cfemail="3150581c525d4453714044585f5f58415850521f545544">[email&#160;protected]</span></a></li>
+              <li><a href="#join"><span class="__cf_email__" data-cfemail="3150581c525d4453714044585f5f58415850521f545544">[email&#160;protected]</span></a></li>
               <li><a href="#join">Join mailing list</a></li>
               <li><a href="#events">Attend an event</a></li>
             </ul>
@@ -715,10 +918,10 @@
           <div class="footer-col">
             <p class="footer-head">Community</p>
             <ul class="footer-links">
-              <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
-              <li><a href="#" aria-label="LinkedIn (placeholder link)">LinkedIn</a></li>
-              <li><a href="#" aria-label="Discord (placeholder link)">Discord</a></li>
-              <li><a href="#" aria-label="GitHub (placeholder link)">GitHub</a></li>
+              <li><a href="#join" aria-label="Instagram (placeholder link)">Instagram</a></li>
+              <li><a href="#join" aria-label="LinkedIn (placeholder link)">LinkedIn</a></li>
+              <li><a href="#join" aria-label="Discord (placeholder link)">Discord</a></li>
+              <li><a href="#join" aria-label="GitHub (placeholder link)">GitHub</a></li>
             </ul>
           </div>
         </div>
