@@ -269,9 +269,278 @@
         el.style.transform = "";
       };
 
+
       el.addEventListener("mousemove", onMove);
       el.addEventListener("mouseleave", onLeave);
       el.addEventListener("blur", onLeave);
     });
   }
+
+
+  // ============================================================
+  // Choose Your Path — click to expand / collapse
+  // ============================================================
+  const pathCards = $$(".path-card");
+  pathCards.forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Allow clicks on links inside the detail panel to propagate
+      if (e.target.closest("a")) return;
+
+      const isActive = card.classList.contains("path-active");
+
+      // Reset all cards
+      pathCards.forEach((c) => {
+        c.classList.remove("path-active", "path-dimmed");
+        const detail = c.querySelector(".path-detail");
+        if (detail) detail.setAttribute("aria-hidden", "true");
+      });
+
+      if (!isActive) {
+        card.classList.add("path-active");
+        const detail = card.querySelector(".path-detail");
+        if (detail) detail.setAttribute("aria-hidden", "false");
+        // Dim the others
+        pathCards.forEach((c) => {
+          if (c !== card) c.classList.add("path-dimmed");
+        });
+      }
+    });
+  });
+
+  // ============================================================
+  // AI Prompt Generator — typewriter + copy to clipboard
+  // ============================================================
+  const PROMPTS = [
+    {
+      text: "Build a mini-RAG pipeline: ingest 3–5 PDFs, chunk them, embed with a free model, and answer questions with source citations. Measure how often answers reference the right document.",
+      tags: "RAG · Intermediate",
+      why: "RAG is one of the most in-demand patterns in production AI. Knowing how to build one gives you a real edge in interviews and internship projects."
+    },
+    {
+      text: "Design a prompt that forces an LLM to admit uncertainty. Test it on 10 questions — 5 the model should know, 5 it shouldn't. What patterns do you notice in the failures?",
+      tags: "Prompt Engineering · Beginner",
+      why: "Understanding model uncertainty is critical for building safe, trustworthy AI. This is a core skill for any practitioner."
+    },
+    {
+      text: "Take a public dataset from data.gov or Kaggle and build a 3-chart data story that makes one clear argument. No ML required — just good visualization and a narrative.",
+      tags: "Data Visualization · Beginner",
+      why: "Communicating data clearly is as valuable as analyzing it. This sharpens both your technical and storytelling skills."
+    },
+    {
+      text: "Train a simple image classifier to distinguish between two campus locations using 20 photos from your phone. Document where it fails and hypothesize why.",
+      tags: "Computer Vision · Intermediate",
+      why: "Building intuition for model failures is more valuable than building a perfect model. Real-world AI always starts with messy data."
+    },
+    {
+      text: "Build a chatbot that answers questions about a single 10-page document. Then try to jailbreak it — what guardrails do you need to add?",
+      tags: "LLMs · Intermediate",
+      why: "Adversarial testing is a real engineering discipline. Understanding attack surfaces makes you a more thoughtful builder."
+    },
+    {
+      text: "Write a two-paragraph algorithmic bias audit of any AI tool you use daily. What data was it trained on? Who might it systematically disadvantage?",
+      tags: "AI Ethics · Beginner",
+      why: "Bias audits are increasingly required in both industry and policy contexts. Structured ethical analysis is a genuine career skill."
+    },
+    {
+      text: "Create an AI-powered study schedule generator: take a course syllabus as input and output a week-by-week prep plan. Then evaluate it against your own judgment.",
+      tags: "Productivity AI · Beginner",
+      why: "Building tools for your own life forces you to define success criteria and iterate on real feedback — the core product loop."
+    },
+    {
+      text: "Implement a cosine similarity recommendation engine on a small text corpus like course descriptions or book summaries. Compare its suggestions to your own intuition.",
+      tags: "Embeddings · Intermediate",
+      why: "Embeddings power search, recommendation, and RAG systems. Getting hands-on with them demystifies how modern AI reasons about meaning."
+    },
+    {
+      text: "Build an evaluation harness for a prompt: define 5 test cases with expected outputs, run them, score the results, then improve the prompt until it passes 4 out of 5.",
+      tags: "Evals · Advanced",
+      why: "A systematic eval loop is what separates prototype-level from production-level AI engineering. Most beginners skip this entirely."
+    },
+    {
+      text: "Pick one AI safety concern — hallucination, bias, misuse, or job displacement — and write a 1-page policy memo as if advising a university. Back every claim with a real example.",
+      tags: "AI Policy · Beginner",
+      why: "Engineers who can translate technical risk into policy language are rare and valuable. This prompt builds that exact skill."
+    },
+    {
+      text: "Use a free speech-to-text API to transcribe a 5-minute lecture clip. Build a summarizer on top. Measure quality by hand and document what the model gets wrong.",
+      tags: "Multimodal · Intermediate",
+      why: "Audio + language pipelines are exploding in accessibility tech and education tools. End-to-end pipeline experience is a practical superpower."
+    },
+    {
+      text: "Design a rubric for evaluating whether an AI-generated essay meets college assignment standards. Define your criteria, then try to automate the scoring.",
+      tags: "AI in Education · Beginner",
+      why: "Defining quality for AI outputs is harder than it sounds. Building rubrics sharpens both product thinking and understanding of model limitations."
+    }
+  ];
+
+  // Set the weekly prompt automatically based on week number
+  const weekIndex = Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000)) % PROMPTS.length;
+  let currentPromptIndex = weekIndex;
+
+  const promptDisplay = $("#prompt-display");
+  const promptTags    = $("#prompt-tags");
+  const promptWhy     = $("#prompt-why");
+  const generateBtn   = $("#generate-prompt");
+  const copyBtn       = $("#copy-prompt");
+
+  const setPrompt = (idx, animate) => {
+    const p = PROMPTS[idx];
+    if (promptTags) promptTags.textContent = p.tags;
+    if (promptWhy)  promptWhy.textContent  = p.why;
+    if (!promptDisplay) return;
+
+    if (!animate || prefersReducedMotion) {
+      promptDisplay.textContent = p.text;
+      return;
+    }
+
+    // Typewriter animation
+    promptDisplay.classList.add("typing");
+    promptDisplay.textContent = "";
+    let i = 0;
+    const speed = 14; // ms per character
+    const cursor = "▌";
+
+    const tick = () => {
+      if (i <= p.text.length) {
+        promptDisplay.textContent = p.text.slice(0, i) + (i < p.text.length ? cursor : "");
+        i++;
+        setTimeout(tick, speed);
+      } else {
+        promptDisplay.classList.remove("typing");
+      }
+    };
+    tick();
+  };
+
+  // Init with this week's prompt (no animation on load)
+  setPrompt(currentPromptIndex, false);
+
+  if (generateBtn) {
+    generateBtn.addEventListener("click", () => {
+      let nextIdx;
+      do {
+        nextIdx = Math.floor(Math.random() * PROMPTS.length);
+      } while (nextIdx === currentPromptIndex && PROMPTS.length > 1);
+      currentPromptIndex = nextIdx;
+      setPrompt(currentPromptIndex, true);
+    });
+  }
+
+  if (copyBtn && promptDisplay) {
+    copyBtn.addEventListener("click", () => {
+      const text = promptDisplay.textContent.replace("▌", "").trim();
+      if (!navigator.clipboard) {
+        // Fallback for older browsers
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      } else {
+        navigator.clipboard.writeText(text).catch(() => {});
+      }
+      copyBtn.textContent = "Copied ✓";
+      copyBtn.classList.add("btn-copied");
+      setTimeout(() => {
+        copyBtn.textContent = "Copy prompt";
+        copyBtn.classList.remove("btn-copied");
+      }, 2000);
+    });
+  }
+
+  // ============================================================
+  // Event card expand / collapse
+  // ============================================================
+  $$(".card-expand-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const card  = btn.closest(".card");
+      const panel = card && card.querySelector(".card-expand-panel");
+      if (!panel) return;
+
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      panel.hidden = isOpen;
+    });
+  });
+
+  // ============================================================
+  // Button click feedback (localized micro-bounce, no shake)
+  // ============================================================
+  $$(".btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (prefersReducedMotion) return;
+      btn.classList.remove("btn-active-flash");
+      void btn.offsetWidth;
+      btn.classList.add("btn-active-flash");
+      setTimeout(() => btn.classList.remove("btn-active-flash"), 200);
+    });
+  });
+
+  // ============================================================
+  // Stat counter animation (counts up on scroll into view)
+  // ============================================================
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    const statEls = $$(".stat dt");
+
+    const animateCount = (el) => {
+      const raw = el.textContent.trim();
+      const match = raw.match(/^(\d+)(\+?)$/);
+      if (!match) return;
+      const target = parseInt(match[1], 10);
+      const suffix = match[2];
+      const duration = 900;
+      const startTime = performance.now();
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+      const tick = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.round(easeOut(progress) * target);
+        el.textContent = String(current) + suffix;
+        if (progress < 1) window.requestAnimationFrame(tick);
+      };
+
+      window.requestAnimationFrame(tick);
+    };
+
+    const statIo = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          animateCount(entry.target);
+          statIo.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.6 }
+    );
+
+    statEls.forEach((el) => statIo.observe(el));
+  }
+
+  // ============================================================
+  // Auto-stagger reveal delays for grid cards
+  // ============================================================
+  const staggerSelectors = [
+    ".card-grid",
+    ".demo-grid",
+    ".feature-grid",
+    ".spotlight-grid",
+    ".fp-grid",
+  ];
+
+  staggerSelectors.forEach((gridSel) => {
+    const grid = $(gridSel);
+    if (!grid) return;
+    $$(".reveal", grid).forEach((card, i) => {
+      if (!card.style.getPropertyValue("--reveal-delay")) {
+        card.style.setProperty("--reveal-delay", `${i * 90}ms`);
+      }
+    });
+  });
+
 })();

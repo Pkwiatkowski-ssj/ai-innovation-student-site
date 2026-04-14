@@ -2169,3 +2169,827 @@ select:focus {
     opacity: 0.25;
   }
 }
+/* ============================================================
+   ENHANCED INTERACTIONS & ANIMATIONS (v2 polish)
+   ============================================================ */
+
+/* --- Button scale on hover (adds scale on top of existing translateY) --- */
+.btn:hover {
+  transform: translateY(-3px) scale(1.035);
+}
+.btn-ghost:hover {
+  transform: translateY(-3px) scale(1.025);
+}
+
+/* --- Button active / click feedback (localized, no shake) --- */
+.btn:active,
+.btn.btn-active-flash {
+  transform: scale(0.95) translateY(1px) !important;
+  transition: transform 70ms ease !important;
+}
+
+/* --- CTA glow pulse on important primary buttons --- */
+.btn-primary.btn-cta-glow {
+  animation: ctaGlowPulse 3s ease-in-out infinite;
+}
+@keyframes ctaGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 18px 70px rgba(43, 188, 255, 0.22),
+      0 0 0 1px rgba(255, 255, 255, 0.10) inset;
+  }
+  50% {
+    box-shadow:
+      0 18px 80px rgba(43, 188, 255, 0.42),
+      0 0 28px rgba(255, 184, 28, 0.20),
+      0 0 0 1px rgba(255, 255, 255, 0.14) inset;
+  }
+}
+.btn-primary.btn-cta-glow:hover {
+  animation: none;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 26px 100px rgba(43, 188, 255, 0.38),
+    0 0 32px rgba(255, 184, 28, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.16) inset;
+}
+
+/* --- Card hover: lift + shadow for event cards --- */
+.card {
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    border-color 220ms var(--ease);
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(43, 188, 255, 0.20) inset;
+  border-color: rgba(43, 188, 255, 0.22);
+}
+
+/* --- Feature cards lift --- */
+.feature-card {
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    border-color 220ms var(--ease);
+}
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.30),
+    0 0 40px rgba(43, 188, 255, 0.10);
+  border-color: rgba(43, 188, 255, 0.20);
+}
+.feature-card:hover .feature-icon {
+  transform: scale(1.18) rotate(-4deg);
+  transition: transform 280ms var(--ease);
+}
+.feature-icon {
+  transition: transform 280ms var(--ease);
+}
+
+/* --- Featured project cards (fp-card) lift --- */
+.fp-card {
+  transition:
+    transform 240ms var(--ease),
+    box-shadow 240ms var(--ease),
+    border-color 240ms var(--ease);
+}
+.fp-card:hover {
+  transform: translateY(-7px) scale(1.012);
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.35),
+    0 0 50px rgba(43, 188, 255, 0.12);
+}
+.fp-card--blue:hover {
+  border-color: rgba(43, 188, 255, 0.28);
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.35),
+    0 0 50px rgba(43, 188, 255, 0.15);
+}
+.fp-card--gold:hover {
+  border-color: rgba(255, 184, 28, 0.28);
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.35),
+    0 0 50px rgba(255, 184, 28, 0.14);
+}
+.fp-card--research:hover {
+  border-color: rgba(167, 139, 250, 0.28);
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.35),
+    0 0 50px rgba(167, 139, 250, 0.12);
+}
+
+/* --- Demo cards lift --- */
+.demo-card {
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    border-color 220ms var(--ease);
+}
+.demo-card:hover {
+  transform: translateY(-5px) scale(1.012);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.30),
+    0 0 0 1px rgba(43, 188, 255, 0.18) inset;
+  border-color: rgba(43, 188, 255, 0.22);
+}
+
+/* --- Person cards lift --- */
+.person-card {
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    border-color 220ms var(--ease);
+}
+.person-card:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.28),
+    0 0 40px rgba(43, 188, 255, 0.10);
+}
+
+/* --- Avatar subtle scale on card hover --- */
+.person-card:hover .avatar {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 3px rgba(43, 188, 255, 0.22), 0 12px 36px rgba(0, 0, 0, 0.28);
+  transition: transform 280ms var(--ease), box-shadow 280ms var(--ease);
+}
+.avatar {
+  transition: transform 280ms var(--ease), box-shadow 280ms var(--ease);
+}
+
+/* --- Stat card subtle glow on hover --- */
+.stat:hover {
+  border-color: rgba(43, 188, 255, 0.28);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.28),
+    0 0 32px rgba(43, 188, 255, 0.12);
+}
+
+/* --- Featured event card hover --- */
+.featured-event {
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    border-color 220ms var(--ease);
+}
+.featured-event:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.32),
+    0 0 60px rgba(43, 188, 255, 0.10);
+  border-color: rgba(43, 188, 255, 0.20);
+}
+
+/* --- Nav CTA button enhanced glow --- */
+.nav-links .nav-cta {
+  position: relative;
+  overflow: hidden;
+}
+.nav-links .nav-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity 200ms var(--ease);
+}
+.nav-links .nav-cta:hover::before {
+  opacity: 1;
+}
+
+/* --- Reveal: slide-up with stagger for grid children --- */
+.card-grid .card,
+.demo-grid .demo-card,
+.feature-grid .feature-card,
+.spotlight-grid .person-card {
+  transition-property: opacity, transform;
+  transition-duration: 620ms;
+  transition-timing-function: var(--ease);
+}
+
+/* --- Section label accent entrance --- */
+.section-label {
+  display: inline-block;
+  transition: letter-spacing 400ms var(--ease);
+}
+
+/* --- Join card shimmer on hover --- */
+.join-card {
+  transition:
+    box-shadow 240ms var(--ease),
+    border-color 240ms var(--ease);
+}
+.join-card:hover {
+  box-shadow:
+    0 60px 200px rgba(43, 188, 255, 0.12),
+    0 0 0 1px rgba(43, 188, 255, 0.16) inset;
+  border-color: rgba(43, 188, 255, 0.16);
+}
+
+/* --- Smooth section entrance (fade-up for section heads) --- */
+.section-head h2,
+.section-head p {
+  transition:
+    opacity 700ms var(--ease),
+    transform 700ms var(--ease);
+}
+.section-head .reveal.is-visible h2 {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Pill tag hover accent --- */
+.fp-tag {
+  transition: background 150ms var(--ease), color 150ms var(--ease), border-color 150ms var(--ease);
+}
+.fp-tag:hover {
+  background: rgba(43, 188, 255, 0.18);
+  color: rgba(245, 248, 255, 0.98);
+  border-color: rgba(43, 188, 255, 0.30);
+}
+.tag {
+  transition: background 150ms var(--ease), color 150ms var(--ease), border-color 150ms var(--ease);
+}
+.tag:hover {
+  background: rgba(43, 188, 255, 0.14);
+  border-color: rgba(43, 188, 255, 0.26);
+}
+
+/* --- Float card enhanced animation speed variance --- */
+.float-card {
+  will-change: transform;
+}
+
+/* --- Back-to-top hover glow --- */
+.back-to-top {
+  transition: color 150ms var(--ease), text-shadow 150ms var(--ease);
+}
+.back-to-top:hover {
+  color: rgba(43, 188, 255, 0.96);
+  text-shadow: 0 0 16px rgba(43, 188, 255, 0.32);
+}
+
+/* --- Reduced motion: disable new animations --- */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary.btn-cta-glow {
+    animation: none;
+  }
+  .btn:hover,
+  .btn-ghost:hover,
+  .btn-primary.btn-cta-glow:hover {
+    transform: none;
+  }
+  .btn:active {
+    transform: none !important;
+  }
+  .card:hover,
+  .feature-card:hover,
+  .fp-card:hover,
+  .demo-card:hover,
+  .person-card:hover,
+  .stat:hover,
+  .featured-event:hover,
+  .join-card:hover {
+    transform: none;
+  }
+  .feature-card:hover .feature-icon,
+  .person-card:hover .avatar {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   TEAM SECTION — 6-member layout with advisor full-width
+   ============================================================ */
+
+/* Advisor card spans full row and gets a gold accent border */
+.person-card--advisor {
+  grid-column: 1 / -1;
+  border-color: rgba(255, 184, 28, 0.22);
+  background:
+    radial-gradient(600px 280px at 10% 50%, rgba(255, 184, 28, 0.08), transparent 62%),
+    rgba(10, 16, 48, 0.46);
+}
+.person-card--advisor:hover {
+  border-color: rgba(255, 184, 28, 0.34);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.28),
+    0 0 40px rgba(255, 184, 28, 0.12);
+}
+.person-card--advisor .person-card-inner {
+  grid-template-columns: 64px 1fr;
+}
+.person-card--advisor h3 {
+  font-size: 1.15rem;
+}
+
+/* 3-column grid for the 5 student cards, advisor above spans all 3 */
+@media (max-width: 980px) {
+  .person-card--advisor {
+    grid-column: auto;
+  }
+}
+
+/* ============================================================
+   CHOOSE YOUR PATH SECTION
+   ============================================================ */
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.path-card {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem 1.35rem;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+  font-family: inherit;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 40px rgba(8, 18, 48, 0.10);
+  transition:
+    transform 240ms var(--ease),
+    border-color 240ms var(--ease),
+    box-shadow 240ms var(--ease),
+    opacity 240ms var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.path-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(280px 180px at 50% 0%, rgba(43, 188, 255, 0.10), transparent 65%);
+  opacity: 0;
+  transition: opacity 240ms var(--ease);
+  pointer-events: none;
+}
+.path-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(43, 188, 255, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+}
+.path-card:hover::before { opacity: 1; }
+.path-card:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+.path-card.path-active {
+  border-color: var(--electric);
+  box-shadow:
+    0 0 0 1px rgba(43, 188, 255, 0.35),
+    0 28px 90px rgba(43, 188, 255, 0.18);
+  transform: translateY(-5px);
+}
+.path-card.path-active::before { opacity: 1; }
+.path-card.path-dimmed {
+  opacity: 0.42;
+  transform: scale(0.97);
+}
+
+.path-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  transition: transform 300ms var(--ease);
+  line-height: 1;
+}
+.path-card:hover .path-icon,
+.path-card.path-active .path-icon {
+  transform: scale(1.2) rotate(-6deg);
+}
+.path-name {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.96);
+}
+.path-tagline {
+  margin: 0;
+  color: rgba(245, 248, 255, 0.62);
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Expand panel inside path card */
+.path-detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition:
+    max-height 460ms var(--ease),
+    opacity 360ms var(--ease),
+    margin-top 360ms var(--ease);
+  pointer-events: none;
+}
+.path-card.path-active .path-detail {
+  max-height: 420px;
+  opacity: 1;
+  margin-top: 1.1rem;
+  pointer-events: auto;
+}
+.path-detail p {
+  margin: 0 0 0.85rem;
+  color: rgba(245, 248, 255, 0.70);
+  font-weight: 500;
+  font-size: 0.92rem;
+  line-height: 1.62;
+}
+.path-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+}
+.path-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: rgba(245, 248, 255, 0.80);
+}
+.path-list li::before {
+  content: "→";
+  color: var(--electric);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+@media (max-width: 980px) {
+  .path-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .path-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   PROMPT LAB SECTION
+   ============================================================ */
+.prompt-card {
+  border-radius: calc(var(--radius-lg) + 4px);
+  border: 1px solid rgba(43, 188, 255, 0.18);
+  background:
+    radial-gradient(700px 320px at 15% 20%, rgba(43, 188, 255, 0.09), transparent 60%),
+    radial-gradient(600px 280px at 85% 80%, rgba(255, 184, 28, 0.07), transparent 58%),
+    rgba(10, 16, 48, 0.55);
+  box-shadow: 0 30px 100px rgba(8, 18, 48, 0.18);
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  transition: border-color 240ms var(--ease), box-shadow 240ms var(--ease);
+}
+.prompt-card:hover {
+  border-color: rgba(43, 188, 255, 0.28);
+  box-shadow: 0 40px 120px rgba(43, 188, 255, 0.10);
+}
+
+.prompt-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.5rem 0;
+  flex-wrap: wrap;
+}
+.prompt-week-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(10, 16, 48, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: rgba(245, 248, 255, 0.86);
+}
+.prompt-tags-chip {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--electric);
+  background: rgba(43, 188, 255, 0.10);
+  border: 1px solid rgba(43, 188, 255, 0.20);
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  transition: background 240ms var(--ease), border-color 240ms var(--ease);
+}
+
+.prompt-card-body {
+  padding: 1.25rem 1.5rem;
+}
+.prompt-text {
+  margin: 0 0 0.85rem;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 1.0rem;
+  line-height: 1.75;
+  color: rgba(245, 248, 255, 0.92);
+  background: rgba(7, 11, 24, 0.50);
+  border-left: 3px solid var(--electric);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1rem 1.15rem;
+  min-height: 80px;
+  position: relative;
+  word-break: break-word;
+  transition: border-color 300ms var(--ease);
+}
+/* Typewriter cursor */
+.prompt-text::after {
+  content: "";
+}
+.prompt-text.typing {
+  border-color: var(--qu-gold);
+}
+.prompt-why {
+  margin: 0;
+  color: rgba(245, 248, 255, 0.58);
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.prompt-card-footer {
+  padding: 0 1.5rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.prompt-actions {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+.prompt-hint {
+  margin: 0;
+  color: rgba(245, 248, 255, 0.40);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Copy button success state */
+.btn-copied {
+  background: rgba(43, 255, 140, 0.18) !important;
+  border-color: rgba(43, 255, 140, 0.30) !important;
+  color: rgba(43, 255, 140, 0.95) !important;
+}
+
+/* ============================================================
+   FP-CARD HOVER PEEK OVERLAY
+   ============================================================ */
+.fp-card-peek {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.55rem 1rem;
+  background: rgba(43, 188, 255, 0.18);
+  border-top: 1px solid rgba(43, 188, 255, 0.28);
+  backdrop-filter: blur(8px);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--electric);
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 220ms var(--ease);
+  z-index: 2;
+  letter-spacing: 0.02em;
+}
+.fp-card--gold .fp-card-peek {
+  background: rgba(255, 184, 28, 0.16);
+  border-color: rgba(255, 184, 28, 0.26);
+  color: var(--qu-gold);
+}
+.fp-card--research .fp-card-peek {
+  background: rgba(167, 139, 250, 0.16);
+  border-color: rgba(167, 139, 250, 0.26);
+  color: #a78bfa;
+}
+.fp-card:hover .fp-card-peek {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   EVENT CARD EXPAND
+   ============================================================ */
+.card-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.card-expand-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(43, 188, 255, 0.08);
+  color: var(--electric);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition:
+    background 160ms var(--ease),
+    border-color 160ms var(--ease),
+    transform 160ms var(--ease);
+  font-family: inherit;
+  line-height: 1;
+}
+.card-expand-btn:hover {
+  background: rgba(43, 188, 255, 0.16);
+  border-color: rgba(43, 188, 255, 0.28);
+  transform: scale(1.08);
+}
+.card-expand-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+.card-expand-btn[aria-expanded="true"] {
+  background: rgba(43, 188, 255, 0.18);
+  border-color: rgba(43, 188, 255, 0.30);
+}
+.card-expand-icon {
+  display: block;
+  transition: transform 280ms var(--ease);
+  pointer-events: none;
+}
+.card-expand-btn[aria-expanded="true"] .card-expand-icon {
+  transform: rotate(45deg);
+}
+
+.card-expand-panel {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  display: grid;
+  gap: 0.5rem;
+  animation: expandIn 280ms var(--ease) forwards;
+}
+@keyframes expandIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.expand-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+}
+.expand-label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(245, 248, 255, 0.45);
+  min-width: 52px;
+  flex-shrink: 0;
+}
+.expand-val {
+  color: rgba(245, 248, 255, 0.80);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   REDUCED MOTION — new features
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .path-card,
+  .path-card:hover,
+  .path-card.path-active,
+  .path-card.path-dimmed { transform: none; }
+  .path-detail { transition: none; }
+  .fp-card-peek { transform: none; opacity: 0; }
+  .fp-card:hover .fp-card-peek { opacity: 1; }
+  .card-expand-panel { animation: none; }
+  .path-card:hover .path-icon,
+  .path-card.path-active .path-icon { transform: none; }
+  .prompt-card, .prompt-card:hover { transform: none; }
+}
+
+/* ============================================================
+   FEATURED PROJECTS — real project card variants
+   ============================================================ */
+
+/* ── Green variant (Hive Heroes) ─────────────────────────── */
+.fp-card--green {
+  border-color: rgba(74, 222, 128, 0.14);
+  background:
+    radial-gradient(500px 240px at 20% 30%, rgba(74, 222, 128, 0.08), transparent 60%),
+    rgba(10, 16, 48, 0.50);
+}
+.fp-card--green .fp-card-media {
+  background: linear-gradient(
+    135deg,
+    rgba(22, 101, 52, 0.26) 0%,
+    rgba(74, 222, 128, 0.12) 45%,
+    rgba(10, 16, 48, 0.80) 100%
+  );
+}
+.fp-card--green:hover {
+  border-color: rgba(74, 222, 128, 0.32);
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.38),
+    0 0 50px rgba(74, 222, 128, 0.14);
+}
+.fp-status--game {
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.24);
+  color: #4ade80;
+}
+.fp-status--game .fp-status-dot {
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.22);
+  animation: pulse 2s ease-in-out infinite;
+}
+.fp-card--green .fp-card-peek {
+  background: rgba(74, 222, 128, 0.16);
+  border-color: rgba(74, 222, 128, 0.28);
+  color: #4ade80;
+}
+.fp-card--green .fp-tag {
+  border-color: rgba(74, 222, 128, 0.16);
+}
+.fp-card--green .fp-tag:hover {
+  background: rgba(74, 222, 128, 0.16);
+  border-color: rgba(74, 222, 128, 0.30);
+  color: #4ade80;
+}
+
+/* ── Per-card ambient glow in the media area ─────────────── */
+.fp-media-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  transition: opacity 260ms var(--ease);
+  pointer-events: none;
+  z-index: 0;
+}
+.fp-glow--blue {
+  background: radial-gradient(120px 100px at 50% 60%, rgba(43, 188, 255, 0.35), transparent 70%);
+}
+.fp-glow--gold {
+  background: radial-gradient(120px 100px at 50% 60%, rgba(255, 184, 28, 0.35), transparent 70%);
+}
+.fp-glow--green {
+  background: radial-gradient(120px 100px at 50% 60%, rgba(74, 222, 128, 0.32), transparent 70%);
+}
+.fp-card:hover .fp-media-glow { opacity: 1; }
+
+/* ── Icon wobble on card hover ───────────────────────────── */
+.fp-icon {
+  position: relative;
+  z-index: 1;
+  transition: transform 300ms var(--ease), filter 300ms var(--ease);
+}
+.fp-card--blue:hover  .fp-icon { transform: scale(1.18) rotate(-6deg); filter: drop-shadow(0 0 12px rgba(43, 188, 255, 0.55)); }
+.fp-card--gold:hover  .fp-icon { transform: scale(1.18) rotate(6deg);  filter: drop-shadow(0 0 12px rgba(255, 184, 28, 0.55)); }
+.fp-card--green:hover .fp-icon { transform: scale(1.22) translateY(-4px); filter: drop-shadow(0 0 12px rgba(74, 222, 128, 0.55)); }
+
+/* ── Gold primary button override ───────────────────────── */
+.fp-btn--gold {
+  background: linear-gradient(135deg, #f59e0b 0%, var(--qu-gold) 55%, #fde68a 160%);
+  color: rgba(10, 10, 10, 0.92);
+  box-shadow: 0 12px 40px rgba(255, 184, 28, 0.28);
+}
+.fp-btn--gold:hover {
+  box-shadow: 0 18px 60px rgba(255, 184, 28, 0.40);
+  transform: translateY(-3px) scale(1.035);
+}
+
+/* ── Green primary button override ──────────────────────── */
+.fp-btn--green {
+  background: linear-gradient(135deg, #16a34a 0%, #4ade80 60%, #bbf7d0 180%);
+  color: rgba(10, 10, 10, 0.92);
+  box-shadow: 0 12px 40px rgba(74, 222, 128, 0.24);
+}
+.fp-btn--green:hover {
+  box-shadow: 0 18px 60px rgba(74, 222, 128, 0.36);
+  transform: translateY(-3px) scale(1.035);
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .fp-card--blue:hover  .fp-icon,
+  .fp-card--gold:hover  .fp-icon,
+  .fp-card--green:hover .fp-icon { transform: none; filter: none; }
+  .fp-media-glow { transition: none; }
+}
